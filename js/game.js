@@ -65,7 +65,8 @@ class Game{
                      }
                     
                      //text to display player score.
-
+                     text("player1 :"+ allPlayers.player1.score,50,50);
+                     text("player2 :"+ allPlayers.player2.score,50,100);
                      
                  
                  }
@@ -107,15 +108,15 @@ class Game{
                         if (fruitGroup.get(i).isTouching(players)) {
                             fruitGroup.get(i).destroy();
                             player.score =player.score+1;
-                        }
+                        
                      // add the condition to calculate the score.
-                     text("player1 :"+ allPlayers.player1.score,50,50);
-                     text("player2 :"+ allPlayers.player2.score,50,100);
+                    
                     
                      //and use update() to update the values in the database.
                      player.update();
 
                   }
+                     }
                 }
                 
                   
